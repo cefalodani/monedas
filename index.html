@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotizador de Criptomonedas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Cotizador de Criptomonedas</h1>
+
+    <div class="currency-container">
+      <div class="currency-row">
+        <label for="currency-select">Moneda con la que pagar:</label>
+        <select id="currency-select">
+          <option value="USD">Dólares (USD)</option>
+          <option value="ARS">Pesos Argentinos (ARS)</option>
+          <option value="EUR">Euros (EUR)</option>
+          <option value="VES">Bolívares (VES)</option>
+        </select>
+      </div>
+
+      <div class="currency-row">
+        <label for="amount-input">Monto a Comprar:</label>
+        <input type="number" id="amount-input" step="0.01" min="0">
+      </div>
+    </div>
+
+    <div class="crypto-container">
+      <div class="crypto-row">
+        <label for="crypto-select">Criptomoneda a comprar:</label>
+        <select id="crypto-select">
+          <option value="ethereum">Ethereum (ETH)</option>
+          <option value="bitcoin">Bitcoin (BTC)</option>
+          <option value="axs">Axie Infinity Shards (AXS)</option>
+          <option value="binancecoin">Binance Coin (BNB)</option>
+        </select>
+      </div>
+
+      <div class="crypto-row">
+        <label for="current-price">Precio Actual:</label>
+        <div id="current-price" class="price-info">
+          <span class="value">-</span>
+        </div>
+      </div>
+
+      <div class="crypto-row">
+        <label for="highest-price">Precio Más Alto del Día:</label>
+        <div id="highest-price" class="price-info">
+          <span class="value">-</span>
+        </div>
+      </div>
+
+      <div class="crypto-row">
+        <label for="lowest-price">Precio Más Bajo del Día:</label>
+        <div id="lowest-price" class="price-info">
+          <span class="value">-</span>
+        </div>
+      </div>
+
+      <div class="crypto-row">
+        <label for="launch-price">Precio desde su Lanzamiento:</label>
+        <div id="launch-price" class="price-info">
+          <span class="value">-</span>
+        </div>
+      </div>
+
+      <div class="crypto-row">
+        <label for="price-difference">Diferencia de Precios:</label>
+        <div id="price-difference" class="price-info">
+          <span class="value">-</span>
+        </div>
+      </div>
+
+      <div class="crypto-row">
+        <label for="quantity-input">Cantidad a Comprar:</label>
+        <input type="text" id="quantity-input" readonly>
+      </div>
+
+      <div class="crypto-row">
+        <label for="total-cost">Total de Costo:</label>
+        <input type="text" id="total-cost" readonly>
+      </div>
+    </div>
+
+    <img src="" alt="" class="bitcoin-logo">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
